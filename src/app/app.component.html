@@ -1,0 +1,12 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light border" >
+    <img src="../assets/logoIA.jpg" class="rounded-circle m-2 border me-2" width="100px">
+    <h1 class="navbar-brand">{{pageTitle}}</h1>
+    <ul class="nav nav-pills">
+      <a [routerLink]="['/welcome']"><li class="me-2">Home</li></a>
+      <a [routerLink]="['/character']"><li>Character</li></a>
+    </ul>
+</nav>
+
+<div class="container-fluid border my-2 d-flex justify-content-center rounded py-2" style="background-color: #9ED20A;" >
+  <router-outlet ></router-outlet>
+</div>
