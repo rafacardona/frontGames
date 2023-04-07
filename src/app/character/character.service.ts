@@ -15,8 +15,8 @@ export class CharacterService {
 
     constructor(private http: HttpClient) { }
 
-    getCharacter(): Observable<ICharacter> {
-        return this.http.get<ICharacter>(this.url)
+    getCharacter(): Observable<any> {
+        return this.http.get(this.url)
     }
 
 
@@ -36,19 +36,19 @@ export class CharacterService {
         return throwError(() => 'Error encontrado rey ->' + errorMessage);
     }
 
-    getNextPage(next: string): Observable<ICharacter> {
+    getNextPage(next: string): Observable<any> {
         if (next !== null) {
             this.next = next;
-            return this.http.get<ICharacter>(this.next);
+            return this.http.get<any>(this.next);
         } else {
             alert('La url no es valida');
             return this.getPreviusPage(this.url);
         }
     }
 
-    getPreviusPage(previus: string): Observable<ICharacter> {
+    getPreviusPage(previus: string): Observable<any> {
         if (previus !== null) {
-            return this.http.get<ICharacter>(previus).pipe(
+            return this.http.get<any>(previus).pipe(
                 tap(data => console.log('All', JSON.stringify(data))),
                 catchError(this.handleError)
             )

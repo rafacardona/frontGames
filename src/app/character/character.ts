@@ -1,11 +1,4 @@
 export interface ICharacter {
-    info: {
-        count: number,
-        pages: number,
-        next: string,
-        prev: string 
-    },
-    results: [{
         id: number,
         name: string,
         status: string,
@@ -24,5 +17,4 @@ export interface ICharacter {
         episode: string,
         url: string,
         created: string
-    }]
 }

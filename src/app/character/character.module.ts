@@ -15,7 +15,7 @@ import { CharacterService } from "./character.service";
       RouterModule.forChild([
         { path: 'character', component: CharacterComponent },
       ]),
-      HttpClientModule
+      HttpClientModule,
       // Otros módulos importados aquí
     ],
     providers: [
