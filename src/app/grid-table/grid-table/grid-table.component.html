@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="container d-flex  d-flex justify-content-between">
+        <!-- <select class="form-select m-2" style="height: 40px; width: 200px;">
+            <option onselect="">Origen</option>
+            <option>Estado</option>
+            <option>Especie</option>
+            <option>Localizable</option>
+        </select> -->
+        <button (click)="clearSelection()" class="btn btn-success m-2">Limpiar selección</button>
+        <div class="">
+            <button class="btn ms-3 my-2 btn-outline-success" style="float: right;"><i class="fa-solid fa-circle-arrow-right"></i> </button>
+            <button class="btn ms-5 my-2 btn-outline-success" style="float: right;"><i class="fa-solid fa-circle-arrow-left"></i></button>
+        </div>
+    </div>
+    <div>
+        <ag-grid-angular style="width: 1600px; height: 900px;" class="ag-theme-alpine border border-5 rounded" [columnDefs]="columnDefs"
+            [defaultColDef]="defaultColDef" [rowData]="results" [rowSelection]="'multiple'" [animateRows]="true"
+            (gridReady)="onGridReady()" [frameworkComponents]="frameworkComponents" [context]="context">
+        </ag-grid-angular>
+    </div>
+</div>
