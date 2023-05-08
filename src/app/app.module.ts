@@ -13,6 +13,8 @@ import { AgGridModule } from 'ag-grid-angular';
 import { GridTableComponent } from './grid-table/grid-table/grid-table.component';
 import { MyCellComponent } from './my-cell/my-cell.component';
 import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
     GridTableComponent,
     MyCellComponent,
     DeleteBtnComponent,
+    ModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +32,7 @@ import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
       { path: 'welcome', component: WelcomeComponent },
       { path: 'character', component: CharacterComponent},
       { path: 'table', component: GridTableComponent},
+      { path: 'modal', component: ModalComponent},
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
       { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
     ]),
@@ -36,6 +40,7 @@ import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
     CommonModule,
     FormsModule,
     AgGridModule,
+    NgbModule, 
     
   ],
   providers: [],

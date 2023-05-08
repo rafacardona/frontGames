@@ -1,0 +1,13 @@
+<div class="modal-header">
+    <h4 class="modal-title">Borrar Personaje</h4>
+    <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    Vas a eliminar un personaje, ¿Estas seguro?
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="modal.close()">Cancelar</button>
+    <button type="button" class="btn btn-danger" (click)="modal.close('delete')">Eliminar</button>
+</div>

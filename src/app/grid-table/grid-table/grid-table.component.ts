@@ -8,6 +8,8 @@ import { IFloatingFilterAngularComp, ICellRendererAngularComp } from "ag-grid-an
 import { IFloatingFilterParams, ICellRendererParams } from "ag-grid-community";
 import { FloatingFilterComponent } from 'ag-grid-community/dist/lib/components/framework/componentTypes';
 import { DeleteBtnComponent } from 'src/app/delete-btn/delete-btn.component';
+import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalComponent } from 'src/app/modal/modal.component';
 
 
 
@@ -40,7 +42,7 @@ export class GridTableComponent implements OnInit {
   frameworkComponents: any;
 
   private gridColumnApi!: ColumnApi;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, public modalService: NgbModal) {
     this.context = { componentParent: this }
     this.columnDefs = [
 
@@ -111,7 +113,17 @@ export class GridTableComponent implements OnInit {
   }
 
   deleteMethod(id: number) {
-    this.results = this.results.filter(item => item.id !== id);
-    alert('⚠ Elemento ' + id + ' eliminado ⚠');
+    const modal = this.modalService.open(ModalComponent);
+    modal.componentInstance.title = "Eliminar Rercurso";
+    modal.componentInstance.mainText = "¿Estas segur@ de eliminar el recurso?";
+    modal.componentInstance.subText = "Esto es el subtextBORDA";
+    modal.componentInstance.dangerText = 'Esta acción no puede ser deshecha.';
+    modal.componentInstance.buttonLeft = 'No';
+    modal.componentInstance.buttonRight = 'Sí, eliminar';
+    modal.result.then((data) => {
+      if (data === "delete") {
+        this.results = this.results.filter(item => item.id !== id);  
+      }
+    })
   }
 }
