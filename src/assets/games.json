@@ -1,0 +1,170 @@
+[
+    {
+        "id": 1,
+        "name": "The Legend of Zara",
+        "author": "John Smith",
+        "genre": "Action-Adventure",
+        "comments": [
+            "Great game!",
+            "Highly recommended."
+        ],
+        "date": "2022-03-15",
+        "description": "orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 1 
+    },
+    {
+        "id": 2,
+        "name": "Galactic Conquest",
+        "author": "Sarah Johnson",
+        "genre": "Sci-Fi Strategy",
+        "comments": [
+            "Addictive gameplay!",
+            "Awesome graphics."
+        ],
+        "date": "2021-09-28",
+        "description": "Build your intergalactic empire and conquer the cosmos in this thrilling strategy game.",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 2
+    },
+    {
+        "id": 3,
+        "name": "Fantasy Realms",
+        "author": "Michael Thompson",
+        "genre": "RPG",
+        "comments": [
+            "Immersive world!",
+            "Hours of fun."
+        ],
+        "date": "2023-01-10",
+        "description": "Experience a captivating fantasy world filled with magic, monsters, and adventure.",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 3
+    },
+    {
+        "id": 4,
+        "name": "Stealth Assassin",
+        "author": "Emily Davis",
+        "genre": "Stealth Action",
+        "comments": [
+            "Incredible stealth mechanics!",
+            "Challenging missions."
+        ],
+        "date": "2022-07-02",
+        "description": "Become the ultimate assassin as you complete dangerous missions in the shadows.",
+        "img": "https://media.vandal.net/m/9322/200891173520_1.jpg",
+        "ranking" : 4
+    },
+    {
+        "id": 5,
+        "name": "Racing Rivals",
+        "author": "Mark Roberts",
+        "genre": "Racing",
+        "comments": [
+            "Fast-paced and thrilling!",
+            "Compete with friends online."
+        ],
+        "date": "2022-11-18",
+        "description": "Get behind the wheel and race against the best drivers in the world in this adrenaline-fueled racing game.",
+        "img": "https://im.ziffdavisinternational.com/ign_es/screenshot/default/60225-metal-gear-solid-3-subsistence-playstation-2_umwf.jpg",
+        "ranking" : 5
+    },
+    {
+        "id": 6,
+        "name": "Mystic Quest",
+        "author": "Isabella Adams",
+        "genre": "Puzzle",
+        "comments": [
+            "Mind-bending puzzles!",
+            "Beautiful artwork."
+        ],
+        "date": "2023-04-05",
+        "description": "Embark on a mystical journey and solve intricate puzzles to uncover ancient secrets.",
+        "img": "https://uvejuegos.com/img/caratulas/61051/Battlefield-V-PS4.jpg",
+        "ranking" : 6
+    },
+    {
+        "id": 7,
+        "name": "Space Invaders X",
+        "author": "Thomas Wilson",
+        "genre": "Arcade",
+        "comments": [
+            "Nostalgic gameplay!",
+            "Endless fun."
+        ],
+        "date": "2022-02-07",
+        "description": "Defend",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 7
+    },
+    {
+        "id": 8,
+        "name": "Space Invaders X",
+        "author": "Thomas Wilson",
+        "genre": "Arcade",
+        "comments": [
+            "Nostalgic gameplay!",
+            "Endless fun."
+        ],
+        "date": "2022-02-07",
+        "description": "Defend",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 8
+    },
+    {
+        "id": 9,
+        "name": "Space Invaders X",
+        "author": "Thomas Wilson",
+        "genre": "Arcade",
+        "comments": [
+            "Nostalgic gameplay!",
+            "Endless fun."
+        ],
+        "date": "2022-02-07",
+        "description": "Defend",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 9
+    },
+    {
+        "id": 10,
+        "name": "Space Invaders X",
+        "author": "Thomas Wilson",
+        "genre": "Arcade",
+        "comments": [
+            "Nostalgic gameplay!",
+            "Endless fun."
+        ],
+        "date": "2022-02-07",
+        "description": "Defend",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 10
+    },
+    {
+        "id": 11,
+        "name": "Space Invaders X",
+        "author": "Thomas Wilson",
+        "genre": "Arcade",
+        "comments": [
+            "Nostalgic gameplay!",
+            "Endless fun."
+        ],
+        "date": "2022-02-07",
+        "description": "Defend",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 11
+    },
+    {
+        "id": 12,
+        "name": "Space Invaders X",
+        "author": "Thomas Wilson",
+        "genre": "Arcade",
+        "comments": [
+            "Nostalgic gameplay!",
+            "Endless fun."
+        ],
+        "date": "2022-02-07",
+        "description": "Defend",
+        "img": "https://i.pinimg.com/736x/f2/6c/0e/f26c0e8d7648240914c75c7c68a38fc4.jpg",
+        "ranking" : 12
+    }
+]

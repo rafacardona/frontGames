@@ -3,8 +3,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { AppComponent } from "../app.component";
-import { CharacterComponent } from "./character.component";
-import { CharacterService } from "./character.service";
+import { GameComponent } from "./game.component";
+import { GameService } from "./game.service";
 
 @NgModule({
     declarations: [
@@ -13,13 +13,13 @@ import { CharacterService } from "./character.service";
     imports: [
       CommonModule,
       RouterModule.forChild([
-        { path: 'character', component: CharacterComponent },
+        { path: 'character', component: GameComponent },
       ]),
       HttpClientModule,
       // Otros módulos importados aquí
     ],
     providers: [
-      CharacterService,
+      GameService,
     ],
     bootstrap: [AppComponent]
   })

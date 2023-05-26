@@ -2,14 +2,17 @@
     <div class="container d-flex  d-flex justify-content-between">
         <button (click)="clearSelection()" class="btn btn-success m-2">Limpiar selección</button>
         <div class="">
-            <button class="btn ms-3 my-2 btn-outline-success" style="float: right;"><i class="fa-solid fa-circle-arrow-right"></i> </button>
-            <button class="btn ms-5 my-2 btn-outline-success" style="float: right;"><i class="fa-solid fa-circle-arrow-left"></i></button>
+            <button class="btn ms-3 my-2 btn-outline-success" style="float: right;"><i
+                    class="fa-solid fa-circle-arrow-right"></i> </button>
+            <button class="btn ms-5 my-2 btn-outline-success" style="float: right;"><i
+                    class="fa-solid fa-circle-arrow-left"></i></button>
         </div>
     </div>
     <div>
         <ag-grid-angular class="ag-theme-alpine border border-5 rounded " [columnDefs]="columnDefs"
             [defaultColDef]="defaultColDef" [rowData]="results" [rowSelection]="'multiple'" [animateRows]="true"
-            (gridReady)="onGridReady()" [frameworkComponents]="frameworkComponents" [context]="context" >
+            (gridReady)="onGridReady()" [frameworkComponents]="frameworkComponents" [context]="context"
+            [pagination]="true">
         </ag-grid-angular>
     </div>
 </div>

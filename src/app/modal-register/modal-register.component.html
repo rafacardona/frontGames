@@ -1,0 +1,14 @@
+<div class="container my-2">
+    <h3>Registro de usuario</h3>
+    <hr>
+    <label for="user">Usuario </label>
+    <input [(ngModel)]="userName" type="text" name="user" class="form-control  mt-2">
+    <label for="pass" class=" mt-2">Contraseña </label>
+    <input [(ngModel)]="pass" type="password" name="pass" class="form-control  mt-2">
+    <label for="mail" class=" mt-2">Email </label>
+    <input [(ngModel)]="email" type="text" name="mail" class="form-control  mt-2">
+
+    <button type="button" class="btn btn-outline-success me-2 mt-2" (click)="onClickRegister()">Registrar</button>
+    <button type="button" class="btn btn-outline-danger me-2 mt-2" >Salir</button>
+
+</div>

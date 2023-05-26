@@ -1,0 +1,38 @@
+<div>
+    <div>
+    <a  [routerLink]="['/games']">
+        <h1 class="mx-4"><i class="fa-solid fa-circle-left"></i></h1>
+    </a>
+</div>
+<hr>
+<div class="container-fluid d-flex">
+    <div>
+        <p><b>Estado: </b>Online <i class="fa-solid fa-globe fa-fade" style="color: #27511f;"></i></p>
+        <img [src]="img" class=" img-profile img-thumbnail">
+        <button type="button" class="btn btn-outline-secondary btn-sm m-2">Cambiar Imagen Perfil</button> 
+    </div>
+    <div class="container">
+        <div class="form-control mx-3 d-flex flex-column dataUser border border-2">
+            <label for="userName"><b>Usuario: </b></label>
+            <input class="form-control-sm m-2" name="userName" type="text" [value]="name" [disabled]="editActive">
+            <label for="date"><b>Fecha de Registro: </b></label>
+            <input class="form-control-sm m-2" name="date" type="text" value="25-5-23" disabled>
+            <label for="email"><b>E-Mail: </b></label>
+            <input class="form-control-sm m-2" name="email" type="text" [value]="mail" [disabled]="editActive">
+            <label><b>Actualizar Contraseña: </b></label>
+            <div class="m-2 d-flex">
+                <input class="form-control-sm me-2 newPass" [disabled]="editActive" type="text">
+                <input type="button" class="btn btn-outline-success" [disabled]="editActive" value="Actualizar">
+            </div>
+            <hr>
+            <div class="">
+                <input type="button" value="Editar" class="btn btn-outline-warning"  (click)="activeEditProfile()">
+                <input type="button" value="Eliminar" class="btn btn-danger mx-2"  (click)="activeEditProfile()">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+https://pbs.twimg.com/media/FMzmvXdWQAEO4Ek.png -->
+</div>

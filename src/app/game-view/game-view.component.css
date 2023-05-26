@@ -1,0 +1,26 @@
+img{
+    max-width: 20rem;
+    height: auto;
+    box-shadow: 2px 2px 2px 2px;
+}
+h3{
+    background-color: #FAEBD7;
+    box-shadow: 1px 1.5px 1.5px 1px;
+}
+
+.fichatxt{
+    background-color: gainsboro;
+}
+
+.cuerpo{
+    background-color: rgb(238, 238, 238)
+}
+
+.ficha{
+    background-color: white;
+    box-shadow: 0px 1px 1px 1px;
+}
+
+textarea{
+    resize: none;
+}

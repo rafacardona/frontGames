@@ -1,13 +1,28 @@
-<nav style="background-color: #9ED20A;" class="navbar navbar-expand-lg navbar-light border rounded" >
-    <img src="../assets/logoIA.jpg" class="rounded-circle m-2 border me-2" width="100px">
-    <h1 class="navbar-brand">{{pageTitle}}</h1>
-    <ul class="nav nav-pills">
-      <a [routerLink]="['/welcome']"><li class="me-2"><button class="btn"><i class="fa-solid fa-house"></i> Home</button></li></a>
-      <a [routerLink]="['/character']"><li  class="me-2"><button class="btn"><i class="fa-solid fa-person"></i> Character</button></li></a>
-      <a [routerLink]="['/table']"><li><button class="btn"><i class="fa-solid fa-table-list fa-beat-fade"></i> Table</button></li></a>
-    </ul>
-</nav>
-
-<div class="container-fluid border my-2 d-flex justify-content-center rounded py-2" style="background-color: #9ED20A; height: auto;" >
-  <router-outlet ></router-outlet>
+<div class="container-fluid">
+  <nav class="navbar navbar-expand-lg navbar-light container">
+    <div class="container">
+      <img src="../assets/logoWeb.png" class="rounded-circle m-2 border me-2" width="100px">
+      <h1 class="title rounded p-2">{{pageTitle}} <i class="fa-solid fa-trophy" style="color: #d2ba1e;"></i> #1</h1>
+      <ul class="nav nav-pills">
+        <a [routerLink]="['/games']">
+          <li class="me-2"><button class="btn"><i class="fa-solid fa-house"></i> Games</button></li>
+        </a>
+        <!-- <a [routerLink]="['/table']">
+          <li><button class="btn"><i class="fa-solid fa-table-list fa-beat-fade"></i> Table</button></li>
+        </a> -->
+        <a>
+          <li><button class="btn" (click)="openModalLogin()" [hidden]="isLogged">Login</button></li>
+        </a>
+        <a>
+          <li><button class="btn" (click)="openProfileUser()" [hidden]="!isLogged">Perfil</button></li>
+        </a>
+        <a>
+          <li><button class="btn" (click)="logOut()" [hidden]="!isLogged">Cerrar Sesión</button></li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+  <div class="main bg-light container my-2  py-2 main">
+    <router-outlet></router-outlet>
+  </div>
 </div>

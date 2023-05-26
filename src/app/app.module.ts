@@ -6,8 +6,8 @@ import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CharacterComponent } from './character/character.component';
-import { WelcomeComponent } from './welcome/welcome.component';
+import {GameComponent } from './game/game.component';
+
 import { FormsModule } from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
 import { GridTableComponent } from './grid-table/grid-table/grid-table.component';
@@ -15,32 +15,48 @@ import { MyCellComponent } from './my-cell/my-cell.component';
 import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalComponent } from './modal/modal.component';
+import { ModalLoginComponent } from './modal-login/modal-login.component';
+import { GameViewComponent } from './game-view/game-view.component';
+import { CommentComponent } from './comment/comment.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SliderComponent } from './slider/slider.component';
+import { ProfileComponent } from './profile/profile.component';
+import { UserComponent } from './user/user.component';
+import { ModalRegisterComponent } from './modal-register/modal-register.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharacterComponent,
-    WelcomeComponent,
+    GameComponent,
     GridTableComponent,
     MyCellComponent,
     DeleteBtnComponent,
     ModalComponent,
+    ModalLoginComponent,
+    GameViewComponent,
+    CommentComponent,
+    SliderComponent,
+    ProfileComponent,
+    UserComponent,
+    ModalRegisterComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
-      { path: 'welcome', component: WelcomeComponent },
-      { path: 'character', component: CharacterComponent},
+      { path: 'games', component: GameComponent},
       { path: 'table', component: GridTableComponent},
       { path: 'modal', component: ModalComponent},
-      { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      { path: '**', redirectTo: 'welcome', pathMatch: 'full' }
+      { path: 'game/:id', component: GameViewComponent},
+      { path: 'profile/:idUser', component: ProfileComponent},
+      { path: '', redirectTo: 'games', pathMatch: 'full' },
+      { path: '**', redirectTo: 'games', pathMatch: 'full' }
     ]),
     HttpClientModule,
     CommonModule,
     FormsModule,
     AgGridModule,
-    NgbModule, 
+    NgbModule,
+    SlickCarouselModule 
     
   ],
   providers: [],

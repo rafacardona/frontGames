@@ -1,0 +1,37 @@
+[
+    {
+        "idUser": 1,
+        "idGame": 1,
+        "text": "¡Me encanta este juego!"
+    },
+    {
+        "idUser": 2,
+        "idGame": 2,
+        "text": "La historia de este juego es increíble."
+    },
+    {
+        "idUser": 3,
+        "idGame": 3,
+        "text": "Las gráficas son impresionantes."
+    },
+    {
+        "idUser": 4,
+        "idGame": 4,
+        "text": "No puedo dejar de jugar este juego."
+    },
+    {
+        "idUser": 5,
+        "idGame": 5,
+        "text": "Es el mejor juego de estrategia que he jugado."
+    },
+    {
+        "idUser": 6,
+        "idGame": 6,
+        "text": "Me gusta el modo multijugador de este juego."
+    },
+    {
+        "idUser": 7,
+        "idGame": 7,
+        "text": "Este juego me mantuvo entretenido durante horas."
+    }
+]

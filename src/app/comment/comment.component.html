@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div *ngFor="let comment of comments">
+        <div class="container bg-light comentario border border-2 p-2 rounded my-3  d-flex">
+            <div>
+                <p class="form-control"><b>@{{comment.username}}</b></p>
+                <img class="imagen rounded ms-2 img-thumbnail rounded-circle"
+                    [src]="comment.img">
+            </div>
+            <div class="container form-control rounded mx-2 border ">
+                {{comment.comentario.text}}
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+  

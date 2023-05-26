@@ -1,0 +1,62 @@
+<div>
+    <a [routerLink]="['/games']">
+        <h1 class="mx-4"><i class="fa-solid fa-circle-left"></i></h1>
+    </a>
+</div>
+<div *ngFor="let result of games" class="cuerpo">
+    <div *ngIf="result.id == gameId" class="d-flex container-fluid">
+        <div class="">
+            <img src={{result.img}} class="img-thumbnail m-2">
+            <div class="container ">
+                <hr>
+                <div class="text-center my-3">
+                    <h3>Valoración</h3>
+                    <div class="d-flex container mx-4 ">
+                        <h4>{{avgGame | number: '1.1-1'}}<i class="fa-solid fa-star fa-beat-fade mx-2" style="color: #dfcd0c;"></i></h4>
+                        <h4>- {{totalVotes }} Votos <i class="fa-solid fa-check-to-slot"></i></h4>
+                    </div>
+                    <select [(ngModel)]="voteSelect" class="from-select form-select-lg p-2" [hidden]="isVote" (click)="voteGame()" *ngIf="isLogged">
+                        <option value="" selected >Valorar</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="border border-2 container-fluid rounded m-2 ficha ">
+            <div class="container ">
+                <h3 class="border m-2 rounded text-center ">{{result.name}}</h3>
+                <div class="border m-4 rounded ">
+                    <p class="text-center fichatxt">Ficha tecnica</p>
+                    <ul>
+                        <li><span><b>Fecha de lanzamiento: </b> </span>{{result.release_date}}</li>
+                        <li><span><b>Autor: </b> </span>{{result.autor}}</li>
+                        <li><span><b>Genero: </b></span>{{result.genre}}</li>
+                        <li><span><b>Nota Media: </b></span>{{avgGame | number: '1.1-1'}}</li>
+                        <li><span><b>Descripcion: </b></span>{{result.description}}</li>
+                    </ul>
+                </div>
+                <hr>
+                <div class="comentarios">
+                    <h3 class="border m-2 rounded text-center ">Comentarios</h3>
+                    <div class="m-2 container-fluid">
+                        <app-comment [id]="gameId" class="container"></app-comment>
+                    </div>
+                    <div class="comment m-4">
+                        <textarea [(ngModel)]="textArea" class="form-control" name="comment" [disabled]="!isLogged" [hidden]="!isLogged"></textarea>
+                        <button type="button" class="btn btn-primary my-2" [disabled]="!isLogged" [hidden]="!isLogged" (click)="newComment()">Enviar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
