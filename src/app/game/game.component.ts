@@ -4,6 +4,7 @@ import { Subscription, filter } from 'rxjs';
 import { GameService } from './game.service';
 import { Parser } from '@angular/compiler';
 import { Router } from '@angular/router';
+import { CarouselModule } from 'ngx-bootstrap/carousel';
 
 
 @Component({
@@ -35,7 +36,6 @@ export class GameComponent implements OnInit, OnDestroy {
   set gameFilter(value: string) {
     this._gameFilter = value;
     this.filteredGame = this.perfomFilter(value);
-    console.log('In setter:', this.filteredGame, ' + el privao: ', this._gameFilter, ' el value es: ', value);
   }
 
   ngOnInit(): void {
@@ -55,8 +55,6 @@ export class GameComponent implements OnInit, OnDestroy {
 
   perfomFilter(filterBy: string): any[] {
     filterBy = filterBy.toLocaleLowerCase();
-    console.log('filtraso:', filterBy);
-    //this.games.map(c => console.log(c.name.includes(filterBy)));
     return this.games.filter(game => game.name.toLocaleLowerCase().includes(filterBy));
   }
 

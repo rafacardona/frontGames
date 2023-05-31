@@ -10,7 +10,6 @@ import {GameComponent } from './game/game.component';
 
 import { FormsModule } from '@angular/forms';
 import { AgGridModule } from 'ag-grid-angular';
-import { GridTableComponent } from './grid-table/grid-table/grid-table.component';
 import { MyCellComponent } from './my-cell/my-cell.component';
 import { DeleteBtnComponent } from './delete-btn/delete-btn.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,12 +22,12 @@ import { SliderComponent } from './slider/slider.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserComponent } from './user/user.component';
 import { ModalRegisterComponent } from './modal-register/modal-register.component';
+import { TableAdminComponent } from './table-admin/table-admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GameComponent,
-    GridTableComponent,
     MyCellComponent,
     DeleteBtnComponent,
     ModalComponent,
@@ -39,13 +38,14 @@ import { ModalRegisterComponent } from './modal-register/modal-register.componen
     ProfileComponent,
     UserComponent,
     ModalRegisterComponent,
+    TableAdminComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       { path: 'games', component: GameComponent},
-      { path: 'table', component: GridTableComponent},
       { path: 'modal', component: ModalComponent},
+      { path: 'table', component: TableAdminComponent},
       { path: 'game/:id', component: GameViewComponent},
       { path: 'profile/:idUser', component: ProfileComponent},
       { path: '', redirectTo: 'games', pathMatch: 'full' },

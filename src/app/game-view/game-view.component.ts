@@ -50,7 +50,7 @@ export class GameViewComponent implements OnInit, OnDestroy {
         this.avgGame = this.calcAverageRating();
         this.usersVotesGame = response.data;
         this.checkUserVote();
-        console.log('responseeeeeeeee', response.data[1].user_id, this.gameId, this.idUser, 'botao', this.isVote, 'userbotes', this.usersVotesGame, this.checkUserVote());
+        
       },
       error: err => this.errorMessage = err
     });
@@ -72,17 +72,15 @@ export class GameViewComponent implements OnInit, OnDestroy {
       avg += this.ratingValueGames[i].points;
       count++;
     }
-    console.log(avg);
+   
     this.totalVotes = count;
     return avg / count;
   }
 
   newComment(): void {
     let comment = { "comment": this.textArea };
-    console.log('idcomentario', this.idUser);
     this.gameService.setNewComment(this.gameId, this.idUser, comment).subscribe(
       () => {
-        console.log('idFINAL USEEER--> ', this.idUser, 'user objeto es->', this.userObject, 'y userDAta >>>>', this.userData);
         window.location.reload();
       },
       (error) => {
@@ -95,7 +93,6 @@ export class GameViewComponent implements OnInit, OnDestroy {
     let vote = { "points": this.voteSelect };
     this.gameService.setRaingGame(this.gameId, this.idUser, vote).subscribe(
       response => {
-        console.log('votegameresponse', response);
         alert(response.message);
         window.location.reload();
       }
@@ -104,10 +101,8 @@ export class GameViewComponent implements OnInit, OnDestroy {
 
   checkUserVote(): void {
     for (let i = 0; i <= this.usersVotesGame.length; i++) {
-      console.log('wwww', this.usersVotesGame[i]);
       if (this.usersVotesGame[i].user_id == this.idUser) {
         this.isVote = true;
-        console.log('2222wwwwwwwwww', i, this.usersVotesGame[i], 'isvotre', this.isVote);
         return;
       }
     }

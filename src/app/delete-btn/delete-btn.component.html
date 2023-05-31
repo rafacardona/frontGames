@@ -1,17 +1,10 @@
-<ng-template #modalBorrar let-modal>
-    <div class="modal-header">
-        <h4 class="modal-title">Borrar Personaje</h4>
-        <button class="close" aria-label="close" type="button" (click)="modal.dismissAll()">
-            <span aria-hidden="true">&times;</span>
-        </button>
+<div class="m-2">
+    <h2>Eliminar Usuario<i class="fa-sharp fa-solid fa-triangle-exclamation"></i></h2>
+    <hr>
+    <h4>¿Desea Eliminar Usuario? <i class="fa-solid fa-skull-crossbones"></i></h4>
+    <hr>
+    <div class="d-flex flex-row-reverse p-1">
+        <button class="m-2 btn btn-danger" (click)="deleteUser()">Eliminar</button>
+        <button class="m-2 btn btn" (click)="exit()">Atras</button>
     </div>
-    <div class="modal-body">
-        Vas a eliminar un personaje, ¿Estas seguro?
-    </div>
-    <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="modal.close()">Cancelar</button>
-        <button type="button" class="btn btn-danger" (click)="modal.close('delete')" >Eliminar</button>
-    </div>
-</ng-template>
-
-<button class="btn btn-danger btn-sm" (click)="delCell()"><i class="fa-solid fa-trash-can"></i></button>
+</div>

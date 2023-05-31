@@ -13,13 +13,15 @@ import { UserService } from './user/user.service';
 export class AppComponent implements OnInit {
   pageTitle: string = 'GameRanking';
   userId: number = 12;
-  public isLogged: boolean = false;
+  isLogged: boolean = false;
+  isAdmin: boolean = false;
 
 
   constructor(private modalService: NgbModal, private router: Router, private userService: UserService) { }
 
   ngOnInit(): void {
-    this.isLogged = localStorage.getItem('isLogged') === "yes"; 
+    this.isLogged = localStorage.getItem('isLogged') === "yes";
+    this.isAdmin = localStorage.getItem('isAdmin') === "yes";
   }
 
   openModalLogin(): void {
@@ -27,7 +29,7 @@ export class AppComponent implements OnInit {
   }
 
   openProfileUser(): void {
-    this.router.navigate(["/profile", this.userId])
+    this.router.navigate(["/profile", this.userId]);
   }
 
   getStatusLog(): boolean {
@@ -35,10 +37,14 @@ export class AppComponent implements OnInit {
   }
 
   logOut(): void {
-    console.log('cerrar sesion');
     this.isLogged = false;
+    this.isAdmin = false;
     localStorage.clear();
     this.router.navigate(["/games"]);
+  }
+  
+  openAdminTable(): void {
+    this.router.navigate(["/table"]);
   }
 
 }

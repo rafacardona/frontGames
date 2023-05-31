@@ -20,10 +20,8 @@ export class CommentComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log('di>>',this.id);
     this.gameService.getCommentsGame(this.id).subscribe({
       next: response => {
-        console.log('respuesta obtener commnets',response, 'id', this.id);
         this.comments = response.data;
         this.id = response.data.game_id;  
       }

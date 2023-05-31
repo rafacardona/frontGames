@@ -19,6 +19,9 @@
         <a>
           <li><button class="btn" (click)="logOut()" [hidden]="!isLogged">Cerrar Sesión</button></li>
         </a>
+        <a>
+          <li><button class="btn" (click)="openAdminTable()" [hidden]="!isAdmin" [disabled]="!isAdmin">Administrar</button></li>
+        </a>
       </ul>
     </div>
   </nav>

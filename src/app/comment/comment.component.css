@@ -1,9 +1,22 @@
 .imagen{
-    max-width: 4rem;
+    max-width: 6rem;
     max-height: auto;
-    
+}
+
+textarea{
+    resize: none;
+}
+
+.divImg{
+    box-shadow: 0.5px 0.5px 0.5px 1px ;
+}
+
+.name{
+    background-color: #FAEBD7;
+    color: rgb(14, 14, 14);
+    max-width: 6rem;
 }
 
 .comentario{
-  
-} 
+    box-shadow: 0.5px 0.5px 0.5px 1px ;
+}

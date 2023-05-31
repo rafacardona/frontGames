@@ -36,7 +36,7 @@ export class GameService {
     }
 
     setRaingGame(idGame: number, idUser: number, points: any): Observable<any> {
-        return this.http.post<any>(this.urlGames+ "/" + idGame + "/valorar/" + idUser, points)
+        return this.http.post<any>(this.urlGames + "/" + idGame + "/valorar/" + idUser, points)
     }
 
     private handleError(err: HttpErrorResponse): Observable<never> {
@@ -49,28 +49,4 @@ export class GameService {
         console.error(errorMessage);
         return throwError(() => 'Error encontrado rey ->' + errorMessage);
     }
-
-
-
-    // getNextPage(next: string): Observable<any> {
-    //     if (next !== null) {
-    //         this.next = next;
-    //         return this.http.get<any>(this.next);
-    //     } else {
-    //         alert('La url no es valida');
-    //         return this.getPreviusPage(this.urlGames);
-    //     }
-    // }
-
-    // getPreviusPage(previus: string): Observable<any> {
-    //     if (previus !== null) {
-    //         return this.http.get<any>(previus).pipe(
-    //             tap(data => console.log('All', JSON.stringify(data))),
-    //             catchError(this.handleError)
-    //         )
-    //     } else {
-    //         alert('La url no es valida');
-    //         return this.getNextPage(this.urlGames);
-    //     }
-    // }
 }

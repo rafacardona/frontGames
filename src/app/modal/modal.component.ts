@@ -25,7 +25,6 @@ export class ModalComponent implements OnInit {
   }
 
   delCell() {
-    console.log(this.params);
     this.params.context.componentParent.deleteMethod(this.params.data.id);
   }
 

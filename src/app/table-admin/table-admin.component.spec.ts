@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GridTableComponent } from './grid-table.component';
+import { TableAdminComponent } from './table-admin.component';
 
-describe('GridTableComponent', () => {
-  let component: GridTableComponent;
-  let fixture: ComponentFixture<GridTableComponent>;
+describe('TableAdminComponent', () => {
+  let component: TableAdminComponent;
+  let fixture: ComponentFixture<TableAdminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GridTableComponent ]
+      declarations: [ TableAdminComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(GridTableComponent);
+    fixture = TestBed.createComponent(TableAdminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
