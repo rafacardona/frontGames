@@ -11,8 +11,8 @@ import { ModalRegisterComponent } from '../modal-register/modal-register.compone
 })
 export class ModalLoginComponent {
 
-  @Input() user: any;
-  @Input() pass: any;
+  @Input() user: any = "";
+  @Input() pass: any = "";
   responseUser: any;
   @ViewChild('modal-login') modal: any;
 
@@ -24,28 +24,38 @@ export class ModalLoginComponent {
       "password": this.pass
     };
 
+    console.log(this.user.length, this.pass.length);
+
+    if (this.user.length <= 0) {
+      alert('⚠️ Error al inciar sesion');
+    };
+
+    if (this.pass.length < 8) {
+      alert('⚠️ Error al inciar sesion');
+    };
+
     this.userService.login(params).subscribe(
       response => {
         this.responseUser = response.data;
-        localStorage.setItem('user', JSON.stringify(this.responseUser));
-        localStorage.setItem('isLogged', "yes");
-        if(this.responseUser.roll === "administrador"){
-          localStorage.setItem('isAdmin', 'yes');
-        }else{
-          localStorage.setItem('isAdmin', 'no');
-        }
-
-        if(response.message === "Credenciales incorrectas"){
+        console.log('respondedata', this.responseUser, 'data', response.message);
+        if (response.message === "Credenciales incorrectas") {
           alert('⚠️ Error al inciar sesion');
           localStorage.setItem('isLogged', "no");
           window.location.reload();
+        } else if (response.message === "Bienvenido") {
+          localStorage.setItem('user', JSON.stringify(this.responseUser));
+          localStorage.setItem('isLogged', "yes");
+          if (this.responseUser.roll === "administrador") {
+            localStorage.setItem('isAdmin', 'yes');
+          } else {
+            localStorage.setItem('isAdmin', 'no');
+          };
+          alert("Bienvenido!");
+          window.location.reload();
         }
-
-        alert('Bienvenido!');
-        window.location.reload();
       },
       error => {
-       
+        alert('⚠️ Error al inciar sesion');
       }
     );
   }

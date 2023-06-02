@@ -16,14 +16,14 @@ export class CommentComponent implements OnInit {
   sub!: Subscription;
 
   constructor(private gameService: GameService) {
-   
+
   }
 
   ngOnInit(): void {
     this.gameService.getCommentsGame(this.id).subscribe({
       next: response => {
         this.comments = response.data;
-        this.id = response.data.game_id;  
+        this.id = response.data.game_id;
       }
     });
 

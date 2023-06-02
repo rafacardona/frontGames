@@ -27,17 +27,14 @@ export class ModalRegisterComponent implements OnInit {
     console.log('ddsads', this.pass.length);
     if (this.pass.length < 8) {
       alert('La contraseña tiene que tener al menos 8 caracteres');
-
     };
 
     if (this.userName.length <= 0) {
       alert('El usuario no puede estar vacio ⚠️');
-
     };
 
     if (this.email.length <= 0) {
       alert('El email no puede estar vacio ⚠️');
-
     };
 
     let params = {

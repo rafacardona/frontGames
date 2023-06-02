@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div *ngFor="let comment of comments">
         <div class="container bg-light comentario border border-2 p-2 rounded my-3  d-flex">
-            <div class=" border  rounded bg-white divImg">
+            <div class=" border  rounded bg-white">
                 <p class="text-center name" ><b>@{{comment.username}}</b></p>
-                <img class="imagen rounded mb-3 p-1 img-thumbnail rounded-circle border border-3"
+                <img class="imagen rounded mx-1 mb-3 p-1 img-thumbnail rounded-circle border border-3"
                     [src]="comment.img">
             </div>
             <div class="container form-control rounded mx-2 border ">
